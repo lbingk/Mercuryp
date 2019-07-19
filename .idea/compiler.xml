@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mercuryp-registration-authority" />
+        <module name="mercuryp-transport-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mercury-pregistration-authority" target="1.7" />
+      <module name="mercuryp-rpc" target="1.7" />
+      <module name="mercuryp-transpot" target="1.7" />
+      <module name="mercuryptansport" target="1.8" />
+      <module name="mercuryptransport" target="1.7" />
+      <module name="transport" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

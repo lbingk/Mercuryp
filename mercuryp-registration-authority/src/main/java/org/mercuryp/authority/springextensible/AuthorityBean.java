@@ -1,7 +1,5 @@
 package org.mercuryp.authority.springextensible;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
 
 /**
  * @Description 模拟扩展：注册中心配置

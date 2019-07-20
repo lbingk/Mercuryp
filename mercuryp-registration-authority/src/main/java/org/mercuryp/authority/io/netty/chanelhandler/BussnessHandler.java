@@ -14,9 +14,9 @@ public class BussnessHandler extends BaseBussnessHandler {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        System.out.println("server channelRead..");
-        System.out.println(ctx.channel().remoteAddress() + "->Server :" + msg.toString());
-        ctx.writeAndFlush(Unpooled.copiedBuffer("hello my name is lyncc", CharsetUtil.UTF_8));
+        System.out.println("authority server channelRead..");
+        System.out.println(ctx.channel().remoteAddress() + "->authority Server :" + msg.toString());
+        ctx.writeAndFlush(Unpooled.copiedBuffer("hello my name is authority Server", CharsetUtil.UTF_8));
     }
 
 

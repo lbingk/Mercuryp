@@ -1,13 +1,13 @@
 package org.mercuryp.authority.io.netty;
 
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.EventLoopGroup;
+import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.string.StringDecoder;
+import io.netty.handler.codec.string.StringEncoder;
+import org.mercuryp.authority.io.netty.chanelhandler.BussnessHandler;
 import org.mercuryp.authority.registry.SpringContextHolder;
 import org.mercuryp.authority.springextensible.AuthorityBean;
 
@@ -34,8 +34,11 @@ public class AuthorityNettyServer {
                 childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     protected void initChannel(SocketChannel socketChannel) throws Exception {
-                        // TODO: 解码，编码以及业务逻辑处理链
-                        socketChannel.pipeline().addLast();
+                        // 解码，编码以及业务逻辑处理链
+                        ChannelPipeline pipeline = socketChannel.pipeline();
+                        pipeline.addLast("decoder", new StringDecoder());
+                        pipeline.addLast("encoder", new StringEncoder());
+                        pipeline.addLast(new BussnessHandler());
                     }
                 }).
                 // 缓冲区

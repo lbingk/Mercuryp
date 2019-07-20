@@ -1,7 +1,10 @@
 package org.mercuryp.authority.springextensible;
 
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
-import org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.xml.BeanDefinitionParser;
+import org.springframework.beans.factory.xml.ParserContext;
 import org.w3c.dom.Element;
 
 /**
@@ -10,20 +13,18 @@ import org.w3c.dom.Element;
  * @Date 2019/7/19 17:24
  * @Version 1.0
  **/
-public class AuthorityBeanDefinitionParser extends AbstractSingleBeanDefinitionParser {
+public class AuthorityBeanDefinitionParser implements BeanDefinitionParser {
 
     @Override
-    protected Class getBeanClass(Element element) {
-        return AuthorityBean.class;
-    }
-
-    @Override
-    protected void doParse(Element element, BeanDefinitionBuilder bean) {
-        String ip = element.getAttribute("ip");
-        String timeout = element.getAttribute("timeout");
-
-        bean.addPropertyValue("ip", ip);
-        bean.addPropertyValue("timeout", timeout);
-
+    public BeanDefinition parse(Element element, ParserContext parserContext) {
+        RootBeanDefinition beanDefinition = new RootBeanDefinition();
+        beanDefinition.setBeanClass(AuthorityBean.class);
+        beanDefinition.setLazyInit(false);
+        beanDefinition.getPropertyValues().add("port", element.getAttribute("port"));
+        beanDefinition.getPropertyValues().add("timeout", element.getAttribute("timeout"));
+        BeanDefinitionRegistry beanDefinitionRegistry = parserContext.getRegistry();
+        //注册bean到BeanDefinitionRegistry中
+        beanDefinitionRegistry.registerBeanDefinition(AuthorityBean.class.getName(), beanDefinition);
+        return beanDefinition;
     }
 }

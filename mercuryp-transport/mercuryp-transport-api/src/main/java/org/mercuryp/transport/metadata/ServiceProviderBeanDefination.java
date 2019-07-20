@@ -1,8 +1,9 @@
-package org.mercuryp.authority.metadata;
+package org.mercuryp.transport.metadata;
 
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -13,7 +14,7 @@ import java.util.List;
  **/
 @Setter
 @Getter
-public class ServiceProviderBeanDefination {
+public class ServiceProviderBeanDefination implements Serializable {
     private String ip;
     private String port;
     private String interfaceImplClassName;

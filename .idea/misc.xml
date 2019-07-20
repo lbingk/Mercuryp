@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/mercuryp-registration-authority/pom.xml" />
         <option value="$PROJECT_DIR$/mercuryp-transport/mercuryp-transport-api/pom.xml" />
         <option value="$PROJECT_DIR$/mercuryp-transport/pom.xml" />
+        <option value="$PROJECT_DIR$/mercuryp-serializable/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

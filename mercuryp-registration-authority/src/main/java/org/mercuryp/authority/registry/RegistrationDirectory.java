@@ -1,6 +1,7 @@
 package org.mercuryp.authority.registry;
 
-import org.mercuryp.authority.metadata.ServiceProviderBeanDefination;
+
+import org.mercuryp.transport.metadata.ServiceProviderBeanDefination;
 
 import java.util.List;
 import java.util.Map;

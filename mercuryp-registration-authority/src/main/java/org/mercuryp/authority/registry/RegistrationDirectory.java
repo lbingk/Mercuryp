@@ -1,9 +1,6 @@
 package org.mercuryp.authority.registry;
 
 
-import org.mercuryp.transport.metadata.ServiceProviderBeanDefination;
-
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -32,9 +29,9 @@ public class RegistrationDirectory {
     }
 
     /**
-     * 用 ConcurrentHashMap 来装载对应的注册服务:key 值为注册的地址:ip+"$"+port
+     * 用 ConcurrentHashMap 来装载对应的注册服务:key 值为注册的地址:ip
      **/
-    public static Map<String, List<ServiceProviderBeanDefination>> ServiceProviderBeanDefinationMap = new ConcurrentHashMap<>();
+    public static Map<String, String> ServiceProviderBeanDefinationMap = new ConcurrentHashMap<>();
 
 
 }

@@ -19,7 +19,9 @@
 
     <modules>
         <module>mercuryp-rpc</module>
-        <module>mercuryp-Serializable</module>
+        <module>mercuryp-serializable</module>
+        <module>mercuryp-common</module>
+        <module>mercuryp-example</module>
         <module>mercuryp-transport</module>
         <module>mercuryp-registration-authority</module>
     </modules>

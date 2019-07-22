@@ -2,8 +2,10 @@ package org.mercuryp.transport.metadata;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.msgpack.annotation.Message;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,10 +16,15 @@ import java.util.List;
  **/
 @Setter
 @Getter
+@Message
 public class ServiceProviderBeanDefination implements Serializable {
-    private String ip;
-    private String port;
     private String interfaceImplClassName;
-    private List<String> interfaceClassNameList;
-    private List<String> methodNameList;
+    private List<String> interfaceClassName = new ArrayList<>();
+    private List<String> methodNameList = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return  "interfaceImplClassName:" + interfaceImplClassName + ";" +
+                "interfaceClassName:" + interfaceClassName + ";" + "methodNameList:" + methodNameList + ";";
+    }
 }

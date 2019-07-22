@@ -1,4 +1,4 @@
-package org.mercuryp.authority.registry;
+package org.mercuryp.rpc.util;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -7,6 +7,8 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.lang.annotation.Annotation;
+import java.util.Map;
 
 /**
  * @Description 实现接口：ApplicationContextAware，以便获取Spring的上下文
@@ -67,16 +69,20 @@ public class SpringContextHolder implements ApplicationContextAware {
         }
     }
 
+    public static Map<String, Object> getBeansWithAnnotation(Class<? extends Annotation> annotationType) {
+        return applicationContext.getBeansWithAnnotation(annotationType);
+    }
 
-    public static void setHttpRequestResponseHolder(HttpServletRequest request, HttpServletResponse response){
+    public static void setHttpRequestResponseHolder(HttpServletRequest request, HttpServletResponse response) {
         responseThreadLocal.set(response);
         ApplicationContext ap = WebApplicationContextUtils.getWebApplicationContext(null);
     }
-    public static HttpServletResponse getHttpResponse(){
+
+    public static HttpServletResponse getHttpResponse() {
         return responseThreadLocal.get();
     }
 
-    public static void clean(){
+    public static void clean() {
         responseThreadLocal.remove();
     }
 

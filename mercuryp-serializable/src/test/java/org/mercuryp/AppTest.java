@@ -1,4 +1,4 @@
-package org.mercuryp-rpc;
+package org.mercuryp;
 
 import static org.junit.Assert.assertTrue;
 

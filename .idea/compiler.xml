@@ -6,14 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mercuryp-common" />
+        <module name="mercuryp-example" />
         <module name="mercuryp-registration-authority" />
+        <module name="mercuryp-rpc" />
         <module name="mercuryp-Serializable" />
         <module name="mercuryp-transport-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mercury-pregistration-authority" target="1.7" />
-      <module name="mercuryp-rpc" target="1.7" />
       <module name="mercuryp-transpot" target="1.7" />
       <module name="mercuryptansport" target="1.8" />
       <module name="mercuryptransport" target="1.7" />

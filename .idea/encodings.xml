@@ -4,6 +4,12 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mercuryp-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mercuryp-example" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mercuryp-example-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mercuryp-example-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mercuryp-example/mercuryp-example-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mercuryp-example/mercuryp-example-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mercuryp-example/mercuryp-example-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mercuryp-example/xxoo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mercuryp-registration-authority" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mercuryp-rpc" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mercuryp-serializable" charset="UTF-8" />

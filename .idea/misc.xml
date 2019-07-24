@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="org.mercuryp.rpc.annotation.RpcInvokerService" />
+    </list>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -11,11 +16,15 @@
         <option value="$PROJECT_DIR$/mercuryp-common/pom.xml" />
         <option value="$PROJECT_DIR$/mercuryp-example/pom.xml" />
         <option value="$PROJECT_DIR$/mercuryp-serializable/pom.xml" />
+        <option value="$PROJECT_DIR$/mercuryp-example-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/mercuryp-example-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/mercuryp-rpc/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/mercury-pregistration-authority/pom.xml" />
+        <option value="$PROJECT_DIR$/mercuryp-example/xxoo/pom.xml" />
         <option value="$PROJECT_DIR$/mercuryp-tansport/pom.xml" />
         <option value="$PROJECT_DIR$/mercuryp-transpot/pom.xml" />
         <option value="$PROJECT_DIR$/transport/pom.xml" />

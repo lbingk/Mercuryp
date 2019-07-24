@@ -1,1 +1,1 @@
-http\://www.mercuryp-rpc.org/schema/mercuryp=org.mercuryp.rpc.springextensible.BeanDefinationNamespaceHandler
+http\://www.mercuryp-rpc.org/schema/mercuryp-common=org.mercuryp.rpc.springextensible.BeanDefinationNamespaceHandler

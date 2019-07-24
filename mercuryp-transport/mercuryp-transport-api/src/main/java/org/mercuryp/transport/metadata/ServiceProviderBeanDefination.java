@@ -22,9 +22,12 @@ public class ServiceProviderBeanDefination implements Serializable {
     private List<String> interfaceClassName = new ArrayList<>();
     private List<String> methodNameList = new ArrayList<>();
 
+    /**
+     * 此 toString 方法与注册中心的解析内容有关，不可随意更改
+     **/
     @Override
     public String toString() {
-        return  "interfaceImplClassName:" + interfaceImplClassName + ";" +
+        return "interfaceImplClassName:" + interfaceImplClassName + ";" +
                 "interfaceClassName:" + interfaceClassName + ";" + "methodNameList:" + methodNameList + ";";
     }
 }

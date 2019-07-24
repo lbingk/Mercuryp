@@ -16,5 +16,5 @@ import lombok.Setter;
 public class BaseComunicationBeanDefination {
     private String ip;
     private int port;
-    private String timeout;
+    private int timeout;
 }

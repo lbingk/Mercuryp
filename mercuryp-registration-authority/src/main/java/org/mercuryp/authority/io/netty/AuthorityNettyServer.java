@@ -9,9 +9,9 @@ import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.codec.LengthFieldPrepender;
 import io.netty.handler.timeout.IdleStateHandler;
 import org.mercuryp.authority.io.netty.chanelhandler.BussnessHandler;
+import org.mercuryp.rpc.springextensible.authority.AuthoritySocketBeanDefination;
 import org.mercuryp.transport.handler.MsgpackDecoder;
 import org.mercuryp.transport.handler.MsgpackEncoder;
-import org.mercuryp.rpc.springextensible.authority.AuthorityBeanDefination;
 import org.mercuryp.rpc.util.SpringContextHolder;
 
 import java.util.concurrent.TimeUnit;
@@ -27,7 +27,7 @@ public class AuthorityNettyServer {
 
     public static void run() {
         // 获取配置的参数：port 以及 timetout
-        AuthorityBeanDefination authorityBeanDefination = SpringContextHolder.getBean(AuthorityBeanDefination.class);
+        AuthoritySocketBeanDefination authoritySocketBeanDefination = SpringContextHolder.getBean(AuthoritySocketBeanDefination.class);
         // 创建Boss：作用于客户端的连接
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         // 创建woker：作用于迭代器可用的连接
@@ -52,7 +52,7 @@ public class AuthorityNettyServer {
                 // 缓冲区
                         option(ChannelOption.SO_BACKLOG, 2048*2048*2048);
         try {
-            ChannelFuture channelFuture = bootstrap.bind(Integer.valueOf(authorityBeanDefination.getPort())).sync();
+            ChannelFuture channelFuture = bootstrap.bind(Integer.valueOf(authoritySocketBeanDefination.getPort())).sync();
         } catch (InterruptedException e) {
             e.printStackTrace();
             // 异常情况优雅关闭

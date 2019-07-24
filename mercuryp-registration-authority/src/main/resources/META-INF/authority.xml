@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:authority="http://www.mercuryp-rpc.org/schema/mercuryp"
+       xmlns:authority="http://www.mercuryp-rpc.org/schema/mercuryp-common"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.mercuryp-rpc.org/schema/mercuryp http://www.mercuryp-rpc.org/mercuryp/mercuryp.xsd">
+        http://www.mercuryp-rpc.org/schema/mercuryp-common http://www.mercuryp-rpc.org/mercuryp/mercuryp-common.xsd">
 
-    <authority:authoritybean ip="localhost" port="2181" timeout="5000"/>
-    <!--<authority:providerbean ip="localhost" port="20880" timeout="5000"/>-->
+    <authority:authoritySocketBean ip="localhost" port="2181" timeout="5000"/>
 </beans>

@@ -24,6 +24,7 @@
         <module>mercuryp-example</module>
         <module>mercuryp-transport</module>
         <module>mercuryp-registration-authority</module>
+        <module>mercuryp-example</module>
     </modules>
 
     <name>mercuryp</name>

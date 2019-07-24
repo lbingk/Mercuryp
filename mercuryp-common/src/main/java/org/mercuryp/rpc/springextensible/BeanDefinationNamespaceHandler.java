@@ -1,11 +1,7 @@
 package org.mercuryp.rpc.springextensible;
 
-import org.mercuryp.rpc.springextensible.authority.AuthorityBeanDefination;
-import org.mercuryp.rpc.springextensible.authority.AuthorityBeanDefinationParser;
-import org.mercuryp.rpc.springextensible.consumer.ComsumerBeanDefination;
-import org.mercuryp.rpc.springextensible.consumer.ComsumerBeanDefinationParser;
-import org.mercuryp.rpc.springextensible.provider.ProviderBeanDefination;
-import org.mercuryp.rpc.springextensible.provider.ProviderBeanDefinationParser;
+import org.mercuryp.rpc.springextensible.authority.AuthoritySocketBeanDefination;
+import org.mercuryp.rpc.springextensible.authority.AuthoritySocketBeanDefinationParser;
 import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 
 /**
@@ -17,8 +13,6 @@ import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 public class BeanDefinationNamespaceHandler extends NamespaceHandlerSupport {
     @Override
     public void init() {
-        registerBeanDefinitionParser("authoritybean", new AuthorityBeanDefinationParser(AuthorityBeanDefination.class));
-        registerBeanDefinitionParser("providerbean", new ProviderBeanDefinationParser(ProviderBeanDefination.class));
-        registerBeanDefinitionParser("consumerbean", new ComsumerBeanDefinationParser(ComsumerBeanDefination.class));
+        registerBeanDefinitionParser("authoritySocketBean", new AuthoritySocketBeanDefinationParser(AuthoritySocketBeanDefination.class));
     }
 }

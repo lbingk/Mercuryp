@@ -33,5 +33,4 @@ public class RegistrationDirectory {
      **/
     public static Map<String, String> ServiceProviderBeanDefinationMap = new ConcurrentHashMap<>();
 
-
 }

@@ -1,7 +1,5 @@
 package org.mercuryp.rpc.springextensible;
 
-import org.mercuryp.rpc.springextensible.authority.AuthorityBeanDefination;
-import org.mercuryp.rpc.springextensible.consumer.ComsumerBeanDefination;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
@@ -17,7 +15,7 @@ import org.w3c.dom.Element;
  **/
 public abstract class BaseBeanDefinationParser implements BeanDefinitionParser {
 
-    private Class<?> clz;
+    protected Class<?> clz;
 
     public BaseBeanDefinationParser(Class<?> _clz) {
         clz = _clz;

@@ -2,6 +2,7 @@ package org.mercuryp.transport.metadata;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.mercuryp.rpc.springextensible.BaseComunicationBeanDefination;
 import org.msgpack.annotation.Message;
 
 import java.io.Serializable;
@@ -63,13 +64,13 @@ public class RemoteTransporter implements Serializable {
                 "content:" + content;
     }
 
-    public static RemoteTransporter createRemoteTransporter(String _requestMark, String _requestyType, String _ip, int _port, CommonCustomerBody _commonCustomerBody) {
+    public static RemoteTransporter createRemoteTransporter(String _requestMark, String _requestyType, BaseComunicationBeanDefination _baseComunicationBeanDefination, CommonCustomerBody _commonCustomerBody) {
         RemoteTransporter remoteTransporter = new RemoteTransporter();
         remoteTransporter.setRequestMark(_requestMark);
         remoteTransporter.setRequestyType(_requestyType);
         remoteTransporter.setTimestamp(System.nanoTime());
-        remoteTransporter.setIp(_ip);
-        remoteTransporter.setPort(_port);
+        remoteTransporter.setIp(_baseComunicationBeanDefination.getIp());
+        remoteTransporter.setPort(_baseComunicationBeanDefination.getPort());
         remoteTransporter.setContent(_commonCustomerBody.toString());
         // TODO 信息体的字节长度
         return remoteTransporter;

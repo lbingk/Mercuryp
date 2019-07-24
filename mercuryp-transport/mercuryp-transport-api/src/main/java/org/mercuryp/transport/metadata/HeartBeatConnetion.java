@@ -2,6 +2,7 @@ package org.mercuryp.transport.metadata;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.mercuryp.rpc.springextensible.BaseComunicationBeanDefination;
 import org.msgpack.annotation.Message;
 
 /**
@@ -11,6 +12,7 @@ import org.msgpack.annotation.Message;
  * @Version 1.0
  **/
 
+
 @Setter
 @Getter
 @Message
@@ -19,13 +21,12 @@ public class HeartBeatConnetion extends CommonCustomerBody {
     private String ip;
     private int port;
 
-    public static HeartBeatConnetion createHeartBeatConnetion(String _ip, int _port) {
+    public static HeartBeatConnetion createHeartBeatConnetion(BaseComunicationBeanDefination baseComunicationBeanDefination) {
         HeartBeatConnetion heartBeatConnetion = new HeartBeatConnetion();
-        heartBeatConnetion.setIp(_ip);
-        heartBeatConnetion.setPort(_port);
+        heartBeatConnetion.setIp(baseComunicationBeanDefination.getIp());
+        heartBeatConnetion.setPort(baseComunicationBeanDefination.getPort());
         return heartBeatConnetion;
     }
-
     public HeartBeatConnetion() {
     }
 

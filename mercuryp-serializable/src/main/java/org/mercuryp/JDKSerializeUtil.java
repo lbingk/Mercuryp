@@ -1,7 +1,7 @@
 package org.mercuryp;
 
 
-import org.mercuryp.util.DataConstant;
+import org.mercuryp.util.TransportDataConstant;
 
 import java.io.*;
 
@@ -23,7 +23,7 @@ public class JDKSerializeUtil {
             objOut = new ObjectOutputStream(byteOut);
             objOut.writeObject(obj);
             //此处只能是ISO-8859-1,但是不会影响中文使用
-            str = byteOut.toString(DataConstant.valueOf("ISO_8859_1").getMsg().toString());
+            str = byteOut.toString(TransportDataConstant.valueOf("ISO_8859_1").getMsg().toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -36,7 +36,7 @@ public class JDKSerializeUtil {
         ByteArrayInputStream byteIn = null;
         Object obj = null;
         try {
-            byteIn = new ByteArrayInputStream(str.getBytes(DataConstant.valueOf("ISO_8859_1").getMsg().toString()));
+            byteIn = new ByteArrayInputStream(str.getBytes(TransportDataConstant.valueOf("ISO_8859_1").getMsg().toString()));
             ObjectInputStream objIn = new ObjectInputStream(byteIn);
             obj = objIn.readObject();
         } catch (UnsupportedEncodingException e) {

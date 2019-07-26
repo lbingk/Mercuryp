@@ -10,6 +10,9 @@ public enum TransportDataConstant {
     // 注册中心响应服务订阅
     COSUMER_SUBSCRIBE_RESPONE("cosumer_subscribe_respone", "cosumer_subscribe_respone"),
 
+    // 消费者调用RPC
+    CONSUMER_INVOKE_PROVIDER("consumer_invoke_provider", "consumer_invoke_provider"),
+
     // 服务提供注册成功后的返回的消息
     AUTHORITY_REGISTRY_RESPONE_CONTENT("authority_registry_respone_content", "authority_registry_respone_content"),
     // 注册中心发给消费者的心跳包标识

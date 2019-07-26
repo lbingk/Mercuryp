@@ -3,14 +3,9 @@ package org.mercuryp.rpc.springextensible.consumer;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.mercuryp.rpc.consumer.toauthority.netty.base.CusProxyFactory;
+import org.mercuryp.rpc.netty.consumer.toauthority.base.CusProxyFactory;
 import org.mercuryp.rpc.springextensible.BaseComunicationBeanDefination;
-import org.mercuryp.rpc.springextensible.authority.AuthoritySocketBeanDefination;
-import org.mercuryp.rpc.util.SpringContextHolder;
 import org.springframework.beans.factory.FactoryBean;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @Description 1.配置远程调用的接口元数据，需要实现 FactoryBean 接口，并利用动态代理技术来生成代理对象，注入到spring上下文里面

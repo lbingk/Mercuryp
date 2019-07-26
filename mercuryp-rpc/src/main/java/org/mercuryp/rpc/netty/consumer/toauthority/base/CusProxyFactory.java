@@ -1,4 +1,4 @@
-package org.mercuryp.rpc.consumer.toauthority.netty.base;
+package org.mercuryp.rpc.netty.consumer.toauthority.base;
 
 import org.mercuryp.rpc.springextensible.BaseComunicationBeanDefination;
 

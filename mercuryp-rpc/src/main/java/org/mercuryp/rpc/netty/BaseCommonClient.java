@@ -48,7 +48,6 @@ public abstract class BaseCommonClient {
         bootstrap.channel(NioSocketChannel.class);
         bootstrap.option(ChannelOption.SO_KEEPALIVE, true);
         bootstrap.group(eventLoopGroup);
-        bootstrap.remoteAddress(authoritySocketBeanDefination.getIp(), authoritySocketBeanDefination.getPort());
         bootstrap.handler(new ChannelInitializer<SocketChannel>() {
             @Override
             protected void initChannel(SocketChannel socketChannel) throws Exception {
